@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="toggle.css" />
+		<title>Frontend Mentor | Dictionary web app</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<img src="./assets/images/logo.svg" alt="logo" />
+				<div class="header-first-part">
+					<div class="select-option-div">
+						<select name="" id="">
+							<option value="mono">Mono</option>
+							<option value="serif">Serif</option>
+							<option value="sans-serif">Sans-Serif</option>
+						</select>
+						<img
+							src="./assets/images/icon-arrow-down.svg"
+							alt="icon-arrow-down"
+						/>
+					</div>
+					<hr class="hr" />
+					<div class="header-second-part">
+						<label class="switch">
+							<input type="checkbox" />
+							<span class="slider round"></span>
+						</label>
+						<img src="./assets/images/icon-moon.svg" alt="icon-moon" />
+					</div>
+				</div>
+			</nav>
+			<div class="input-div">
+				<input type="search" id="inputSearch" />
+				<button class="btn-search" id="btn-search">
+					<img src="./assets/images/icon-search.svg" alt="icon-search" />
+				</button>
+			</div>
+		</header>
+		<main>
+			<section class="first-section">
+				<div class="flex-col">
+					<h1 id="word">keyboard</h1>
+					<span class="phonetic" id="phonetic"> /ˈkiːbɔːd/ </span>
+				</div>
+				<img src="./assets/images/icon-play.svg" alt="icon-play" />
+			</section>
+			<section class="second-section">
+				<div class="div-hr">
+					<p class="partOfSpeech-first">noun</p>
+					<hr class="hr-para" />
+				</div>
+				<div class="div-meaning">
+					<p class="meaning">Meaning</p>
+					<ul class="first-ul">
+					</ul>
+				</div>
+				<div class="synonyme-div">
+					<p class="synonyme-div-para">Synonyms</p>
+          <div id="synonyme-div-span">
+            <span class="synonyms" id="synonyms"></span>
+          </div>
+				</div>
+			</section>
+			<section class="third-section">
+				<div class="div-hr">
+					<p class="partOfSpeech-first">verb</p>
+					<hr class="hr-para" />
+				</div>
+				<div class="div-meaning">
+					<p class="meaning">Meaning</p>
+					<ul class="first-ul" id="second-ul">
+            <p class="exemple" id="exemple"></p>
+					</ul>
+				</div>  
+			</section>
+      <hr class="hr-para">
+      <div class="div-source">
+        <p class="source-para">Source</p>
+        <div class="div-para-white">
+          <p class="para-white">https://en.wiktionary.org/wiki/keyboard</p>
+          <img src="./assets/images/icon-new-window.svg" alt="icon-new-window">
+        </div>
+      </div>
+		</main>
+		<script src="main.js"></script>
+	</body>
+</html>

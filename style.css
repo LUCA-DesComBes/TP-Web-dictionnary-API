@@ -188,3 +188,39 @@ li {
 	text-decoration: underline;
 	padding-right: 8px;
 }
+
+@media screen and (max-width: 375px) {
+	body {
+		padding: 24px 24px 3.938rem 24px;
+		width: 100%;
+	}
+	header, main, li {
+		width: 100%;
+	}
+	h1 {
+		font-size: 32px;
+	}
+	.phonetic {
+		font-size: 18px;
+	}
+	.div-source {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+	}
+}
+@media screen and (max-width: 768px) {
+	body {
+		padding: 3.625rem 2.5rem 7.375rem 2.438rem;
+		width: 100%;
+	}
+	header, main, li {
+		width: 100%;
+	}
+	h1 {
+		font-size: 32px;
+	}
+	.phonetic {
+		font-size: 18px;
+	}
+}

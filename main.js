@@ -1,3 +1,31 @@
+const checkbox = document.getElementById('theme-toggle-checkbox');
+const themeIcon = document.getElementById('theme-icon');
+const body = document.body;
+
+checkbox.addEventListener('change', () => {
+  const isLight = checkbox.checked;
+
+  body.classList.toggle('light-mode', isLight);
+
+  themeIcon.src = isLight ? './assets/images/icon-moon-light.svg' : './assets/images/icon-moon.svg';
+});
+
+
+const select = document.getElementById("select");
+
+select.addEventListener("change", () => {
+  const value = select.value;
+
+  if (value === "serif") {
+    body.style.fontFamily = "Lora, serif";
+  } else if (value === "sans-serif") {
+    body.style.fontFamily = "Inter, sans-serif";
+  } else {
+    body.style.fontFamily = "Inconsolata, monospace";
+  }
+});
+
+
 const inputSearch = document.getElementById("inputSearch");
 const btnSearch = document.getElementById("btn-search");
 const wordH1 = document.getElementById("word");
@@ -18,7 +46,7 @@ btnSearch.addEventListener("click", async () => {
   const phonetics = data[0].phonetics;
   synonymsSpan.textContent = data[0].meanings[0].synonyms;
   paraWhite.textContent = data[0].sourceUrls[0];
-  paraWhite.setAttribute("href", data[0].sourceUrls[0])
+  paraWhite.setAttribute("href", data[0].sourceUrls[0]);
   const firstPhonetic = phonetics.find((p) => p.text);
   phoneticSpan.textContent = firstPhonetic.text;
   const def = data[0].meanings[0]?.definitions || [];
@@ -40,8 +68,8 @@ btnSearch.addEventListener("click", async () => {
 
   for (let i = 0; i < defenition.length; i++) {
     const li = document.createElement("li");
-    const paraExemple = document.createElement("p")
-    paraExemple.classList.add("exemple")
+    const paraExemple = document.createElement("p");
+    paraExemple.classList.add("exemple");
     paraExemple.textContent = defenition[i].example;
     li.textContent = defenition[i].definition;
     secondUl.appendChild(li);
